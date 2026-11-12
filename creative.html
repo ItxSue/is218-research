@@ -24,14 +24,14 @@
       <li><strong>Evidence.</strong> The browser’s Performance API exposes elapsed milliseconds from a monotonic clock. Use it to measure the interval between the ready cue and the input in one browser session. <a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/now">MDN Performance.now(), checked November 11, 2026</a></li>
       <li><strong>Evidence.</strong> Flask documents cookie flags and protections for state-changing requests. Configure secure session cookies in deployment and use CSRF tokens for writes. <a href="https://flask.palletsprojects.com/en/stable/web-security/">Pallets Flask web security, checked November 11, 2026</a></li>
       <li><strong>Interpretation.</strong> Display a personal practice history and label results as browser measurements. Client-side timings can be altered, and device differences limit comparisons between players.</li>
-      <li><strong>Assumption.</strong> Users will understand a visible cue with both text and color. Test the cue with keyboard and pointer input during the first working slice.</li>
+      <li><strong>Assumption.</strong> Players should be able to distinguish the waiting and ready cues by reading the text. Check this with the color cues disabled during the first working slice.</li>
     </ul>
   </section>
   <section>
     <h2>Five user stories</h2>
     <ol>
       <li>As a student, I can register and sign in so I can return to my practice history.</li>
-      <li>As a player, I can start a round and respond to a randomized cue with a key or click. An early input shows a false-start message.</li>
+      <li>As a player, I can start a round and respond with the keyboard or mouse. I can tab to the round button and press Space or Enter to start. The button keeps focus and reads “Wait…” until it changes to “TAP NOW”. I press Space or Enter again, or click the button, when that text appears. Pressing too early shows “Too soon”.</li>
       <li>As a player, I can save a completed attempt once so my result survives a reload.</li>
       <li>As a returning player, I can see my latest attempts and recent median in a private dashboard.</li>
       <li>As an account owner, I can update my display name after signing in.</li>
