@@ -14,6 +14,12 @@
 </header>
 <main>
   <section>
+    <h2>Review 2 · First working slice</h2>
+    <p>The local Flask application now connects signup, sign-in, a reaction round, saving one result, and sign-out. Recent attempts are scoped to the signed-in account. <a href="flash-tap/README.md">Setup and checks</a> · <a href="https://github.com/ItxSue/is218-research/tree/A99/flash-tap">Application code</a> · <a href="portfolio/">Portfolio draft</a></p>
+    <p><strong>Observed checks, November 18.</strong> Account and data checks passed signup, signin, signout, password hashing, private result ownership, input bounds, duplicate-save rejection, and restart persistence. Safari verified signup, a pointer round, saving its measured result, and sign-out. A current keyboard-only round and human peer app review remain pending.</p>
+    <p><strong>Design experiment.</strong> An application factory accepts a database path so each check can use an isolated temporary store and create a new app instance. This makes restart and ownership checks reproducible. The simpler module-global setup shares one path. The factory is retained for this slice. <a href="flash-tap/README.md">Decision and setup</a></p>
+  </section>
+  <section>
     <h2>Two concepts</h2>
     <p>A reaction game gives immediate feedback and a numeric result. Its main risk is that timing varies with input devices and browser conditions. A study-session tracker would record time spent on a subject and chart weekly totals. Its main risk is that elapsed time gives limited information about whether a session was useful.</p>
     <p>The plan selects the reaction game. Each practice attempt provides a clear interaction and a result that can be checked in the browser. The existing local Flash Tap prototype provides a reference for the wait, cue, and false-start states.</p>

@@ -1,0 +1,10 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Flash Tap · Account</title>
+<style>body{font:18px/1.6 system-ui;background:#f7f6f0;color:#14362e;max-width:30rem;margin:4rem auto;padding:1rem}label,input,button{display:block;width:100%;box-sizing:border-box;font:inherit}input,button{padding:.7rem;margin:.5rem 0 1rem}button{background:#006052;color:white;border:0}a{color:#006052}</style></head>
+<body><h1>Flash Tap</h1><h2>{{ 'Create account' if action == 'signup' else 'Sign in' }}</h2>
+{% if error %}<p role="alert">{{ error }}</p>{% endif %}
+<form method="post"><input type="hidden" name="csrf" value="{{ session.csrf }}">
+<label for="username">Username</label><input id="username" name="username" minlength="3" maxlength="40" autocomplete="username" required>
+<label for="password">Password</label><input id="password" name="password" type="password" minlength="10" maxlength="128" autocomplete="{{ 'new-password' if action == 'signup' else 'current-password' }}" required>
+<button>{{ 'Create account' if action == 'signup' else 'Sign in' }}</button></form>
+<a href="{{ url_for('account',action='signin' if action == 'signup' else 'signup') }}">{{ 'Already have an account? Sign in' if action == 'signup' else 'Create an account' }}</a>
+</body></html>
