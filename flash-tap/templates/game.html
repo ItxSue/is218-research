@@ -41,6 +41,10 @@ button.addEventListener("click", () => {
     }
 });
 button.addEventListener("keydown", event => {
-    if (event.repeat && (event.key === " " || event.key === "Enter")) event.preventDefault();
+    if (event.key === " " || event.key === "Enter") {
+        event.preventDefault();
+        if (!event.repeat) button.click();
+    }
 });
+button.focus();
 </script></body></html>

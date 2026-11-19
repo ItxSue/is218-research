@@ -16,7 +16,7 @@
   <section>
     <h2>Review 2 · First working slice</h2>
     <p>The local Flask application now connects signup, sign-in, a reaction round, saving one result, and sign-out. Recent attempts are scoped to the signed-in account. <a href="flash-tap/README.md">Setup and checks</a> · <a href="https://github.com/ItxSue/is218-research/tree/A99/flash-tap">Application code</a> · <a href="portfolio/">Portfolio draft</a></p>
-    <p><strong>Observed checks, November 18.</strong> Account and data checks passed signup, signin, signout, password hashing, private result ownership, input bounds, duplicate-save rejection, and restart persistence. Safari verified signup, a pointer round, saving its measured result, and sign-out. A current keyboard-only round and human peer app review remain pending.</p>
+    <p><strong>Observed checks, November 18.</strong> Account and data checks passed signup, signin, signout, password hashing, private result ownership, input bounds, duplicate-save rejection, and restart persistence. Safari verified signup, a pointer round, saving its measured result, and sign-out. Deterministic JavaScript checks passed keyboard activation, false starts, the ready cue, elapsed timing and save visibility. A full keyboard-only browser round and human peer app review remain pending.</p>
     <p><strong>Design experiment.</strong> An application factory accepts a database path so each check can use an isolated temporary store and create a new app instance. This makes restart and ownership checks reproducible. The simpler module-global setup shares one path. The factory is retained for this slice. <a href="flash-tap/README.md">Decision and setup</a></p>
   </section>
   <section>

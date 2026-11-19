@@ -10,7 +10,7 @@ python3 -m venv .venv
 
 Open http://127.0.0.1:5053. Create a local practice account with a username and a password of at least 10 characters. Press Space or Enter on the round button to start, wait for TAP NOW, and press again. Save the result and sign out. Sign in again to see the saved attempt.
 
-Run `.venv/bin/python check_slice.py` for the focused account and storage checks. Data is in the ignored instance folder. This is a loopback development app. Set a stable SECRET_KEY outside the process when persistent sessions are wanted.
+Run `.venv/bin/python check_slice.py` for the focused account and storage checks. With Node.js available, run `node check_game.js` for deterministic keyboard, false-start, cue, timing and save-visibility checks. Data is in the ignored instance folder. This is a loopback development app. Set a stable SECRET_KEY outside the process when persistent sessions are wanted.
 
 The server owns user IDs and prevents duplicate saves of a round token. Browser measurements are user-controlled and intended for private practice. Server validation checks numeric bounds. It cannot certify a reaction time as tamper-proof.
 
